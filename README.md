@@ -1,2 +1,1 @@
-# dr-leaf
-Dr. Leaf - Automated Plant Disease Detection and Prevention
+# Dr. Leaf - Automated Plant Disease Detection and Prevention
