@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block pagetitle %}
+Services
+{% endblock pagetitle %}
+{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Services Offered</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #333;
+            background-color: #36ad3a;
+            padding: 20px;
+        }
+        .service-box {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Our Services</h1>
+    
+    <div class="service-box">
+        <h2>Service 1</h2>
+        <p>Description of service 1.</p>
+    </div>
+    
+    <div class="service-box">
+        <h2>Service 2</h2>
+        <p>Description of service 2.</p>
+    </div>
+    
+    <div class="service-box">
+        <h2>Service 3</h2>
+        <p>Description of service 3.</p>
+    </div>
+    
+</body>
+</html>
+
+{% endblock body %}
