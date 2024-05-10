@@ -1,29 +1,19 @@
 # Dr. Leaf - Automated Plant Disease Detection and Prevention
-* Plant Disease is necessary for every farmer so we are created Plant disease detection using Deep learning. In which we are using convolutional Neural Network for classifying Leaf images into 39 Different Categories. The Convolutional Neural Code build in Pytorch Framework. For Training we are using Plant village dataset. Dataset Link is in My Blog Section.
+This project aims to build a robust Machine Learning system for automatic plant disease detection. Additionally a user-interface has also been developed to provide information related to plant diseases and to suggest supplements.
+[Kaggle Notebook](https://www.kaggle.com/code/jagritpant21bsa10015/dr-leaf?scriptVersionId=176499358)
 
-## Run Project in your Machine
-* You must have python install in your machine.
-* Create a Python Virtual Environment & Activate Virtual Environment [Link](https://docs.python.org/3/tutorial/venv.html)
-* Install all the dependencies using below command
-    `pip install -r requirements.txt`
-* Go to the `Flask Deployed App` folder.
-* Download the pre-trained model file `plant_disease_model_1.pt` from [here](https://drive.google.com/drive/folders/1ewJWAiduGuld_9oGSrTuLumg9y62qS6A?usp=share_link)
-* Add the downloaded file in `Flask Deployed App` folder.
-* Run the Flask app using below command `python3 app.py`
-* You can also use downloaded file in `Model` Section and play with it using Jupyter Notebook.
+## Dataset used:
+* consists of 87K rgb images of healthy and diseased crop leaves 
+* categorized into 38 different classes acording to fungal, bacterial, or viral diseases etc.
+* split into a ratio of 80:20 for training and validation
+* Plants (14): Tomato, Grape, Orange, Soybean, Squash, Potato, Corn, Strawberry, Peach, Apple, Blueberry, Cherry, Pepper_bell, Raspberry
 
-## Contribution ( Open Source )
-* This Project is now open source.
-* All the developers who are intrested they can contribute in this project.
-* Yo can make UI better , make Deep learning model more powerful , add informative markdown file in section...
-* If you will change Deep learning make sure you upload updated markdown file (.md) , .pdf and .ipynb in particular section.
-* Make sure your code is working. It will not have any type or error.
-* You have to fork this project then make a pull request after you testing will successful.
-* How to make pull request : https://opensource.com/article/19/7/create-pull-request-github
+## ResNet Architecture:
+* Layers: The architecture consists of several convolutional layers organized into stages:
+* conv1: Applies a ConvBlock with 64 output channels.
+* conv2: Applies another ConvBlock with 128 output channels, followed by a pooling layer that reduces the data size.
+* res1: Uses two ConvBlocks with 128 output channels each. 
+* Repeated Stages: This pattern (ConvBlock -> Pooling -> Residual Block) is repeated for stages 3 and 4, with increasing numbers of output channels (256 and 512 respectively).
 
-
-## Testing Images
-
-* If you do not have leaf images then you can use test images located in test_images folder
-* Each Image have it's disease name so you can verify model is working perfact or not.
+### Accuracy: 99.2%
 
